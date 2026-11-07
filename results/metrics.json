@@ -1,0 +1,487 @@
+{
+  "linear_regression": {
+    "predict_current_temperature_from_other_current_readings": {
+      "random_80_20_split_R2": 0.2937,
+      "time_split_R2": -0.985,
+      "time_split_teaching_hours_R2": -0.9572
+    }
+  },
+  "ridge_regression_and_hist_gradient_boosting_regressor": {
+    "y_co2_15": {
+      "persistence_baseline": {
+        "all_teaching_hours": {
+          "MAE": 14.2464,
+          "RMSE": 48.6586,
+          "R2": 0.8935,
+          "n": 465115,
+          "skill_vs_persistence": 0.0
+        },
+        "people_present": {
+          "MAE": 56.8038,
+          "RMSE": 114.6099,
+          "R2": 0.8257,
+          "n": 68154,
+          "skill_vs_persistence": 0.0
+        }
+      },
+      "ridge_regression": {
+        "all_teaching_hours": {
+          "MAE": 19.7135,
+          "RMSE": 43.8407,
+          "R2": 0.9135,
+          "n": 465115,
+          "skill_vs_persistence": -0.3837
+        },
+        "people_present": {
+          "MAE": 54.9301,
+          "RMSE": 96.6721,
+          "R2": 0.876,
+          "n": 68154,
+          "skill_vs_persistence": 0.033
+        }
+      },
+      "hist_gradient_boosting_regressor": {
+        "all_teaching_hours": {
+          "MAE": 12.813,
+          "RMSE": 37.9469,
+          "R2": 0.9352,
+          "n": 465115,
+          "skill_vs_persistence": 0.1006
+        },
+        "people_present": {
+          "MAE": 46.7701,
+          "RMSE": 85.7678,
+          "R2": 0.9024,
+          "n": 68154,
+          "skill_vs_persistence": 0.1766
+        }
+      }
+    },
+    "y_co2_30": {
+      "persistence_baseline": {
+        "all_teaching_hours": {
+          "MAE": 22.8705,
+          "RMSE": 78.5587,
+          "R2": 0.7231,
+          "n": 465115,
+          "skill_vs_persistence": 0.0
+        },
+        "people_present": {
+          "MAE": 92.628,
+          "RMSE": 179.4822,
+          "R2": 0.5967,
+          "n": 68156,
+          "skill_vs_persistence": 0.0
+        }
+      },
+      "ridge_regression": {
+        "all_teaching_hours": {
+          "MAE": 35.3867,
+          "RMSE": 71.8942,
+          "R2": 0.7681,
+          "n": 465115,
+          "skill_vs_persistence": -0.5473
+        },
+        "people_present": {
+          "MAE": 92.4751,
+          "RMSE": 152.2259,
+          "R2": 0.7099,
+          "n": 68156,
+          "skill_vs_persistence": 0.0017
+        }
+      },
+      "hist_gradient_boosting_regressor": {
+        "all_teaching_hours": {
+          "MAE": 21.0404,
+          "RMSE": 60.2061,
+          "R2": 0.8374,
+          "n": 465115,
+          "skill_vs_persistence": 0.08
+        },
+        "people_present": {
+          "MAE": 77.325,
+          "RMSE": 133.1421,
+          "R2": 0.7781,
+          "n": 68156,
+          "skill_vs_persistence": 0.1652
+        }
+      }
+    },
+    "y_co2_60": {
+      "persistence_baseline": {
+        "all_teaching_hours": {
+          "MAE": 35.4159,
+          "RMSE": 116.3367,
+          "R2": 0.3956,
+          "n": 465119,
+          "skill_vs_persistence": 0.0
+        },
+        "people_present": {
+          "MAE": 135.8481,
+          "RMSE": 256.2786,
+          "R2": 0.2051,
+          "n": 68156,
+          "skill_vs_persistence": 0.0
+        }
+      },
+      "ridge_regression": {
+        "all_teaching_hours": {
+          "MAE": 59.0647,
+          "RMSE": 107.369,
+          "R2": 0.4852,
+          "n": 465119,
+          "skill_vs_persistence": -0.6677
+        },
+        "people_present": {
+          "MAE": 133.8287,
+          "RMSE": 215.3093,
+          "R2": 0.4389,
+          "n": 68156,
+          "skill_vs_persistence": 0.0149
+        }
+      },
+      "hist_gradient_boosting_regressor": {
+        "all_teaching_hours": {
+          "MAE": 35.1586,
+          "RMSE": 90.7322,
+          "R2": 0.6323,
+          "n": 465119,
+          "skill_vs_persistence": 0.0073
+        },
+        "people_present": {
+          "MAE": 115.1654,
+          "RMSE": 191.9244,
+          "R2": 0.5542,
+          "n": 68156,
+          "skill_vs_persistence": 0.1522
+        }
+      }
+    },
+    "y_tmp_15": {
+      "persistence_baseline": {
+        "all_teaching_hours": {
+          "MAE": 0.0621,
+          "RMSE": 0.0946,
+          "R2": 0.9985,
+          "n": 465115,
+          "skill_vs_persistence": 0.0
+        },
+        "people_present": {
+          "MAE": 0.1103,
+          "RMSE": 0.1578,
+          "R2": 0.9943,
+          "n": 68154,
+          "skill_vs_persistence": 0.0
+        }
+      },
+      "ridge_regression": {
+        "all_teaching_hours": {
+          "MAE": 0.0471,
+          "RMSE": 0.0706,
+          "R2": 0.9992,
+          "n": 465115,
+          "skill_vs_persistence": 0.2413
+        },
+        "people_present": {
+          "MAE": 0.0784,
+          "RMSE": 0.1205,
+          "R2": 0.9967,
+          "n": 68154,
+          "skill_vs_persistence": 0.289
+        }
+      },
+      "hist_gradient_boosting_regressor": {
+        "all_teaching_hours": {
+          "MAE": 0.0426,
+          "RMSE": 0.066,
+          "R2": 0.9993,
+          "n": 465115,
+          "skill_vs_persistence": 0.3137
+        },
+        "people_present": {
+          "MAE": 0.0735,
+          "RMSE": 0.1145,
+          "R2": 0.997,
+          "n": 68154,
+          "skill_vs_persistence": 0.3335
+        }
+      }
+    },
+    "y_tmp_30": {
+      "persistence_baseline": {
+        "all_teaching_hours": {
+          "MAE": 0.1147,
+          "RMSE": 0.1707,
+          "R2": 0.9953,
+          "n": 465115,
+          "skill_vs_persistence": 0.0
+        },
+        "people_present": {
+          "MAE": 0.1952,
+          "RMSE": 0.2712,
+          "R2": 0.9829,
+          "n": 68156,
+          "skill_vs_persistence": 0.0
+        }
+      },
+      "ridge_regression": {
+        "all_teaching_hours": {
+          "MAE": 0.0838,
+          "RMSE": 0.1258,
+          "R2": 0.9974,
+          "n": 465115,
+          "skill_vs_persistence": 0.2698
+        },
+        "people_present": {
+          "MAE": 0.1419,
+          "RMSE": 0.2084,
+          "R2": 0.9899,
+          "n": 68156,
+          "skill_vs_persistence": 0.2734
+        }
+      },
+      "hist_gradient_boosting_regressor": {
+        "all_teaching_hours": {
+          "MAE": 0.0768,
+          "RMSE": 0.1178,
+          "R2": 0.9977,
+          "n": 465115,
+          "skill_vs_persistence": 0.33
+        },
+        "people_present": {
+          "MAE": 0.132,
+          "RMSE": 0.1956,
+          "R2": 0.9911,
+          "n": 68156,
+          "skill_vs_persistence": 0.3236
+        }
+      }
+    },
+    "y_tmp_60": {
+      "persistence_baseline": {
+        "all_teaching_hours": {
+          "MAE": 0.2146,
+          "RMSE": 0.3087,
+          "R2": 0.9846,
+          "n": 465119,
+          "skill_vs_persistence": 0.0
+        },
+        "people_present": {
+          "MAE": 0.3299,
+          "RMSE": 0.4499,
+          "R2": 0.9528,
+          "n": 68156,
+          "skill_vs_persistence": 0.0
+        }
+      },
+      "ridge_regression": {
+        "all_teaching_hours": {
+          "MAE": 0.1585,
+          "RMSE": 0.2292,
+          "R2": 0.9915,
+          "n": 465119,
+          "skill_vs_persistence": 0.2613
+        },
+        "people_present": {
+          "MAE": 0.2489,
+          "RMSE": 0.3503,
+          "R2": 0.9714,
+          "n": 68156,
+          "skill_vs_persistence": 0.2456
+        }
+      },
+      "hist_gradient_boosting_regressor": {
+        "all_teaching_hours": {
+          "MAE": 0.1524,
+          "RMSE": 0.2207,
+          "R2": 0.9921,
+          "n": 465119,
+          "skill_vs_persistence": 0.2896
+        },
+        "people_present": {
+          "MAE": 0.2376,
+          "RMSE": 0.3317,
+          "R2": 0.9744,
+          "n": 68156,
+          "skill_vs_persistence": 0.2799
+        }
+      }
+    }
+  },
+  "logistic_regression_and_hist_gradient_boosting_classifier": {
+    "logistic_regression": {
+      "threshold": 0.95,
+      "all_teaching_hours": {
+        "precision": 0.8268,
+        "recall": 0.8188,
+        "F1": 0.8228,
+        "positives": 10654,
+        "n": 464722,
+        "PR_AUC": 0.9041
+      },
+      "early_warning_rows_co2_now_le_1000": {
+        "precision": 0.4901,
+        "recall": 0.4728,
+        "F1": 0.4813,
+        "positives": 3046,
+        "n": 456659,
+        "PR_AUC": 0.4646
+      }
+    },
+    "hist_gradient_boosting_classifier": {
+      "threshold": 0.38999999999999996,
+      "all_teaching_hours": {
+        "precision": 0.8693,
+        "recall": 0.8695,
+        "F1": 0.8694,
+        "positives": 10654,
+        "n": 464722,
+        "PR_AUC": 0.9445
+      },
+      "early_warning_rows_co2_now_le_1000": {
+        "precision": 0.6284,
+        "recall": 0.5502,
+        "F1": 0.5867,
+        "positives": 3046,
+        "n": 456659,
+        "PR_AUC": 0.6301
+      }
+    },
+    "rule_current_co2_above_1000": {
+      "threshold": 0.5,
+      "all_teaching_hours": {
+        "precision": 0.9436,
+        "recall": 0.7141,
+        "F1": 0.813,
+        "positives": 10654,
+        "n": 464722
+      },
+      "early_warning_rows_co2_now_le_1000": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "F1": 0.0,
+        "positives": 3046,
+        "n": 456659
+      }
+    },
+    "rule_linear_trend_extrapolation": {
+      "threshold": 0.5,
+      "all_teaching_hours": {
+        "precision": 0.7467,
+        "recall": 0.7912,
+        "F1": 0.7683,
+        "positives": 10654,
+        "n": 464722
+      },
+      "early_warning_rows_co2_now_le_1000": {
+        "precision": 0.4194,
+        "recall": 0.6487,
+        "F1": 0.5094,
+        "positives": 3046,
+        "n": 456659
+      }
+    }
+  },
+  "leakage_check_co2_30": {
+    "random_split": {
+      "MAE": 25.0891,
+      "RMSE": 74.1243,
+      "R2": 0.853,
+      "n": 213907,
+      "skill_vs_persistence": 0.1967
+    },
+    "time_split": {
+      "MAE": 21.0404,
+      "RMSE": 60.2061,
+      "R2": 0.8374,
+      "n": 465115,
+      "skill_vs_persistence": 0.08
+    }
+  },
+  "unseen_rooms_5fold": {
+    "co2_30_hist_gradient_boosting_regressor": {
+      "MAE": {
+        "mean": 21.4309,
+        "std": 1.6933
+      },
+      "R2": {
+        "mean": 0.8267,
+        "std": 0.0234
+      },
+      "skill_vs_persistence": {
+        "mean": 0.0599,
+        "std": 0.028
+      }
+    },
+    "alert30_hist_gradient_boosting_classifier": {
+      "precision": {
+        "mean": 0.8684,
+        "std": 0.0303
+      },
+      "recall": {
+        "mean": 0.8604,
+        "std": 0.0291
+      },
+      "F1": {
+        "mean": 0.8636,
+        "std": 0.0157
+      }
+    }
+  },
+  "next_year_2023": {
+    "co2_30": {
+      "persistence_baseline": {
+        "MAE": 60.6475,
+        "RMSE": 193.8716,
+        "R2": 0.6585,
+        "n": 102132
+      },
+      "hist_gradient_boosting_regressor": {
+        "MAE": 50.8892,
+        "RMSE": 151.0862,
+        "R2": 0.7926,
+        "n": 102132,
+        "skill_vs_persistence": 0.1609
+      }
+    },
+    "tmp_30": {
+      "persistence_baseline": {
+        "MAE": 0.1493,
+        "RMSE": 0.2335,
+        "R2": 0.9926,
+        "n": 106093
+      },
+      "ridge_regression": {
+        "MAE": 0.1069,
+        "RMSE": 0.1891,
+        "R2": 0.9952,
+        "n": 106093,
+        "skill_vs_persistence": 0.2841
+      },
+      "hist_gradient_boosting_regressor": {
+        "MAE": 0.0971,
+        "RMSE": 0.1698,
+        "R2": 0.9961,
+        "n": 106093,
+        "skill_vs_persistence": 0.3498
+      }
+    },
+    "alert30": {
+      "hist_gradient_boosting_classifier": {
+        "precision": 0.9259,
+        "recall": 0.8692,
+        "F1": 0.8966,
+        "positives": 8524,
+        "n": 101710,
+        "PR_AUC": 0.9596
+      },
+      "rule_current_co2_above_1000": {
+        "precision": 0.9583,
+        "recall": 0.7662,
+        "F1": 0.8516,
+        "positives": 8524,
+        "n": 101710
+      }
+    }
+  }
+}

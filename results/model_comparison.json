@@ -1,0 +1,1335 @@
+{
+  "co2_30": {
+    "persistence_baseline": {
+      "scores": {
+        "all_teaching_hours": {
+          "MAE": 22.8709,
+          "R2": 0.7232,
+          "skill_vs_persistence": 0.0
+        },
+        "people_present": {
+          "MAE": 92.6402,
+          "R2": 0.5968,
+          "skill_vs_persistence": 0.0
+        }
+      }
+    },
+    "ridge_regression": {
+      "best_params": {
+        "alpha": 100
+      },
+      "configs_tried": 4,
+      "validation_MAE_best": 81.4283,
+      "fit_seconds": 2.1,
+      "predict_seconds": 0.38,
+      "scores": {
+        "all_teaching_hours": {
+          "MAE": 35.3235,
+          "R2": 0.7684,
+          "skill_vs_persistence": -0.5445
+        },
+        "people_present": {
+          "MAE": 92.4551,
+          "R2": 0.7099,
+          "skill_vs_persistence": 0.002
+        }
+      }
+    },
+    "random_forest_regressor": {
+      "best_params": {
+        "max_depth": 20,
+        "min_samples_leaf": 20
+      },
+      "configs_tried": 3,
+      "validation_MAE_best": 67.2245,
+      "fit_seconds": 177.9,
+      "predict_seconds": 2.16,
+      "scores": {
+        "all_teaching_hours": {
+          "MAE": 21.9355,
+          "R2": 0.8346,
+          "skill_vs_persistence": 0.0409
+        },
+        "people_present": {
+          "MAE": 79.2097,
+          "R2": 0.7735,
+          "skill_vs_persistence": 0.145
+        }
+      }
+    },
+    "hist_gradient_boosting_regressor": {
+      "best_params": {
+        "min_samples_leaf": 20,
+        "max_leaf_nodes": 31,
+        "max_iter": 200,
+        "learning_rate": 0.03,
+        "l2_regularization": 5.0
+      },
+      "configs_tried": 10,
+      "validation_MAE_best": 66.1794,
+      "fit_seconds": 5.7,
+      "predict_seconds": 1.72,
+      "scores": {
+        "all_teaching_hours": {
+          "MAE": 21.0343,
+          "R2": 0.8371,
+          "skill_vs_persistence": 0.0803
+        },
+        "people_present": {
+          "MAE": 77.1844,
+          "R2": 0.7775,
+          "skill_vs_persistence": 0.1668
+        }
+      }
+    },
+    "sarimax": {
+      "best_params": {
+        "order": [
+          1,
+          1,
+          1
+        ],
+        "seasonality": "Fourier daily (3 harmonics) + weekend",
+        "fitted_on": "last 28 days before test, one model per sensor"
+      },
+      "fit_and_forecast_seconds_all_sensors": 176.9,
+      "scores": {
+        "all_teaching_hours": {
+          "MAE": 29.9815,
+          "R2": 0.7365,
+          "skill_vs_persistence": -0.3109
+        },
+        "people_present": {
+          "MAE": 88.6135,
+          "R2": 0.6458,
+          "skill_vs_persistence": 0.0435
+        }
+      }
+    },
+    "lstm": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "scores": {
+        "all_teaching_hours": {
+          "MAE": 25.0778,
+          "R2": 0.7741,
+          "skill_vs_persistence": -0.0965
+        },
+        "people_present": {
+          "MAE": 86.614,
+          "R2": 0.6946,
+          "skill_vs_persistence": 0.0651
+        }
+      },
+      "scores_std": {
+        "all_teaching_hours": {
+          "MAE": 1.3875,
+          "R2": 0.004,
+          "skill_vs_persistence": 0.0607
+        },
+        "people_present": {
+          "MAE": 0.4273,
+          "R2": 0.0017,
+          "skill_vs_persistence": 0.0046
+        }
+      },
+      "fit_seconds": 90.3,
+      "per_seed": [
+        {
+          "seed": 42,
+          "best_params": {
+            "hidden": 64,
+            "lr": 0.003,
+            "epochs": 4,
+            "sequence": "last 60 min (12 steps)",
+            "outputs": "CO2, temperature, alert (shared network)"
+          },
+          "scores": {
+            "all_teaching_hours": {
+              "MAE": 24.6878,
+              "R2": 0.7721,
+              "skill_vs_persistence": -0.0794
+            },
+            "people_present": {
+              "MAE": 86.6439,
+              "R2": 0.6958,
+              "skill_vs_persistence": 0.0647
+            }
+          }
+        },
+        {
+          "seed": 43,
+          "best_params": {
+            "hidden": 64,
+            "lr": 0.003,
+            "epochs": 7,
+            "sequence": "last 60 min (12 steps)",
+            "outputs": "CO2, temperature, alert (shared network)"
+          },
+          "scores": {
+            "all_teaching_hours": {
+              "MAE": 26.9382,
+              "R2": 0.7706,
+              "skill_vs_persistence": -0.1778
+            },
+            "people_present": {
+              "MAE": 87.1217,
+              "R2": 0.6922,
+              "skill_vs_persistence": 0.0596
+            }
+          }
+        },
+        {
+          "seed": 44,
+          "best_params": {
+            "hidden": 64,
+            "lr": 0.003,
+            "epochs": 7,
+            "sequence": "last 60 min (12 steps)",
+            "outputs": "CO2, temperature, alert (shared network)"
+          },
+          "scores": {
+            "all_teaching_hours": {
+              "MAE": 23.6073,
+              "R2": 0.7797,
+              "skill_vs_persistence": -0.0322
+            },
+            "people_present": {
+              "MAE": 86.0764,
+              "R2": 0.6959,
+              "skill_vs_persistence": 0.0709
+            }
+          }
+        }
+      ]
+    },
+    "svr_10k_sample": {
+      "best_params": {
+        "C": 1,
+        "epsilon": 0.1
+      },
+      "configs_tried": 6,
+      "training_rows": 10000,
+      "validation_MAE_best": 77.1359,
+      "fit_seconds": 2.6,
+      "predict_seconds": 135.4,
+      "scores": {
+        "all_teaching_hours": {
+          "MAE": 22.6957,
+          "R2": 0.7744,
+          "skill_vs_persistence": 0.0077
+        },
+        "people_present": {
+          "MAE": 84.4864,
+          "R2": 0.6763,
+          "skill_vs_persistence": 0.088
+        }
+      }
+    },
+    "tcn": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "scores": {
+        "all_teaching_hours": {
+          "MAE": 24.5423,
+          "R2": 0.8066,
+          "skill_vs_persistence": -0.0731
+        },
+        "people_present": {
+          "MAE": 81.5777,
+          "R2": 0.7397,
+          "skill_vs_persistence": 0.1194
+        }
+      },
+      "scores_std": {
+        "all_teaching_hours": {
+          "MAE": 3.227,
+          "R2": 0.0142,
+          "skill_vs_persistence": 0.1411
+        },
+        "people_present": {
+          "MAE": 2.5261,
+          "R2": 0.0114,
+          "skill_vs_persistence": 0.0272
+        }
+      },
+      "fit_seconds": 128.6,
+      "per_seed": [
+        {
+          "seed": 42,
+          "best_params": {
+            "hidden": 64,
+            "lr": 0.003,
+            "epochs": 5,
+            "sequence": "last 60 min (12 steps)",
+            "outputs": "CO2, temperature, alert (shared network)"
+          },
+          "scores": {
+            "all_teaching_hours": {
+              "MAE": 29.0709,
+              "R2": 0.7891,
+              "skill_vs_persistence": -0.2711
+            },
+            "people_present": {
+              "MAE": 84.9544,
+              "R2": 0.73,
+              "skill_vs_persistence": 0.083
+            }
+          }
+        },
+        {
+          "seed": 43,
+          "best_params": {
+            "hidden": 32,
+            "lr": 0.001,
+            "epochs": 8,
+            "sequence": "last 60 min (12 steps)",
+            "outputs": "CO2, temperature, alert (shared network)"
+          },
+          "scores": {
+            "all_teaching_hours": {
+              "MAE": 21.789,
+              "R2": 0.824,
+              "skill_vs_persistence": 0.0473
+            },
+            "people_present": {
+              "MAE": 78.8795,
+              "R2": 0.7557,
+              "skill_vs_persistence": 0.1485
+            }
+          }
+        },
+        {
+          "seed": 44,
+          "best_params": {
+            "hidden": 64,
+            "lr": 0.001,
+            "epochs": 9,
+            "sequence": "last 60 min (12 steps)",
+            "outputs": "CO2, temperature, alert (shared network)"
+          },
+          "scores": {
+            "all_teaching_hours": {
+              "MAE": 22.7671,
+              "R2": 0.8067,
+              "skill_vs_persistence": 0.0045
+            },
+            "people_present": {
+              "MAE": 80.8991,
+              "R2": 0.7335,
+              "skill_vs_persistence": 0.1267
+            }
+          }
+        }
+      ]
+    },
+    "transformer": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "scores": {
+        "all_teaching_hours": {
+          "MAE": 21.6002,
+          "R2": 0.7991,
+          "skill_vs_persistence": 0.0556
+        },
+        "people_present": {
+          "MAE": 80.8471,
+          "R2": 0.723,
+          "skill_vs_persistence": 0.1273
+        }
+      },
+      "scores_std": {
+        "all_teaching_hours": {
+          "MAE": 1.0129,
+          "R2": 0.0126,
+          "skill_vs_persistence": 0.0443
+        },
+        "people_present": {
+          "MAE": 1.8065,
+          "R2": 0.0155,
+          "skill_vs_persistence": 0.0195
+        }
+      },
+      "fit_seconds": 824.8,
+      "per_seed": [
+        {
+          "seed": 42,
+          "best_params": {
+            "hidden": 32,
+            "lr": 0.001,
+            "epochs": 10,
+            "sequence": "last 60 min (12 steps)",
+            "outputs": "CO2, temperature, alert (shared network)"
+          },
+          "scores": {
+            "all_teaching_hours": {
+              "MAE": 23.0155,
+              "R2": 0.7824,
+              "skill_vs_persistence": -0.0063
+            },
+            "people_present": {
+              "MAE": 83.4019,
+              "R2": 0.7019,
+              "skill_vs_persistence": 0.0997
+            }
+          }
+        },
+        {
+          "seed": 43,
+          "best_params": {
+            "hidden": 32,
+            "lr": 0.003,
+            "epochs": 6,
+            "sequence": "last 60 min (12 steps)",
+            "outputs": "CO2, temperature, alert (shared network)"
+          },
+          "scores": {
+            "all_teaching_hours": {
+              "MAE": 21.0842,
+              "R2": 0.8021,
+              "skill_vs_persistence": 0.0781
+            },
+            "people_present": {
+              "MAE": 79.5676,
+              "R2": 0.7287,
+              "skill_vs_persistence": 0.1411
+            }
+          }
+        },
+        {
+          "seed": 44,
+          "best_params": {
+            "hidden": 64,
+            "lr": 0.003,
+            "epochs": 5,
+            "sequence": "last 60 min (12 steps)",
+            "outputs": "CO2, temperature, alert (shared network)"
+          },
+          "scores": {
+            "all_teaching_hours": {
+              "MAE": 20.701,
+              "R2": 0.8128,
+              "skill_vs_persistence": 0.0949
+            },
+            "people_present": {
+              "MAE": 79.5719,
+              "R2": 0.7385,
+              "skill_vs_persistence": 0.1411
+            }
+          }
+        }
+      ]
+    }
+  },
+  "tmp_30": {
+    "persistence_baseline": {
+      "scores": {
+        "all_teaching_hours": {
+          "MAE": 0.1147,
+          "R2": 0.9953,
+          "skill_vs_persistence": 0.0
+        },
+        "people_present": {
+          "MAE": 0.1952,
+          "R2": 0.9829,
+          "skill_vs_persistence": 0.0
+        }
+      }
+    },
+    "ridge_regression": {
+      "best_params": {
+        "alpha": 100
+      },
+      "configs_tried": 4,
+      "validation_MAE_best": 0.1207,
+      "fit_seconds": 2.2,
+      "predict_seconds": 0.5,
+      "scores": {
+        "all_teaching_hours": {
+          "MAE": 0.0838,
+          "R2": 0.9974,
+          "skill_vs_persistence": 0.2691
+        },
+        "people_present": {
+          "MAE": 0.1419,
+          "R2": 0.9899,
+          "skill_vs_persistence": 0.2731
+        }
+      }
+    },
+    "random_forest_regressor": {
+      "best_params": {
+        "max_depth": null,
+        "min_samples_leaf": 10
+      },
+      "configs_tried": 3,
+      "validation_MAE_best": 0.1116,
+      "fit_seconds": 181.5,
+      "predict_seconds": 3.19,
+      "scores": {
+        "all_teaching_hours": {
+          "MAE": 0.0738,
+          "R2": 0.9978,
+          "skill_vs_persistence": 0.3568
+        },
+        "people_present": {
+          "MAE": 0.1315,
+          "R2": 0.9912,
+          "skill_vs_persistence": 0.326
+        }
+      }
+    },
+    "hist_gradient_boosting_regressor": {
+      "best_params": {
+        "min_samples_leaf": 20,
+        "max_leaf_nodes": 15,
+        "max_iter": 200,
+        "learning_rate": 0.03,
+        "l2_regularization": 1.0
+      },
+      "configs_tried": 10,
+      "validation_MAE_best": 0.1122,
+      "fit_seconds": 5.7,
+      "predict_seconds": 1.55,
+      "scores": {
+        "all_teaching_hours": {
+          "MAE": 0.0769,
+          "R2": 0.9978,
+          "skill_vs_persistence": 0.3293
+        },
+        "people_present": {
+          "MAE": 0.1318,
+          "R2": 0.9912,
+          "skill_vs_persistence": 0.3247
+        }
+      }
+    },
+    "sarimax": {
+      "best_params": {
+        "order": [
+          2,
+          1,
+          1
+        ],
+        "seasonality": "Fourier daily (3 harmonics) + weekend",
+        "fitted_on": "last 28 days before test, one model per sensor"
+      },
+      "fit_and_forecast_seconds_all_sensors": 176.9,
+      "scores": {
+        "all_teaching_hours": {
+          "MAE": 0.0777,
+          "R2": 0.9975,
+          "skill_vs_persistence": 0.3224
+        },
+        "people_present": {
+          "MAE": 0.1472,
+          "R2": 0.9887,
+          "skill_vs_persistence": 0.2458
+        }
+      }
+    },
+    "lstm": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "scores": {
+        "all_teaching_hours": {
+          "MAE": 0.146,
+          "R2": 0.9917,
+          "skill_vs_persistence": -0.2729
+        },
+        "people_present": {
+          "MAE": 0.1945,
+          "R2": 0.9827,
+          "skill_vs_persistence": 0.0035
+        }
+      },
+      "scores_std": {
+        "all_teaching_hours": {
+          "MAE": 0.0343,
+          "R2": 0.0037,
+          "skill_vs_persistence": 0.2995
+        },
+        "people_present": {
+          "MAE": 0.0216,
+          "R2": 0.0039,
+          "skill_vs_persistence": 0.111
+        }
+      },
+      "fit_seconds": 90.3,
+      "per_seed": [
+        {
+          "seed": 42,
+          "best_params": {
+            "hidden": 64,
+            "lr": 0.003,
+            "epochs": 4,
+            "sequence": "last 60 min (12 steps)",
+            "outputs": "CO2, temperature, alert (shared network)"
+          },
+          "scores": {
+            "all_teaching_hours": {
+              "MAE": 0.1576,
+              "R2": 0.9915,
+              "skill_vs_persistence": -0.374
+            },
+            "people_present": {
+              "MAE": 0.187,
+              "R2": 0.9845,
+              "skill_vs_persistence": 0.0416
+            }
+          }
+        },
+        {
+          "seed": 43,
+          "best_params": {
+            "hidden": 64,
+            "lr": 0.003,
+            "epochs": 7,
+            "sequence": "last 60 min (12 steps)",
+            "outputs": "CO2, temperature, alert (shared network)"
+          },
+          "scores": {
+            "all_teaching_hours": {
+              "MAE": 0.0994,
+              "R2": 0.9963,
+              "skill_vs_persistence": 0.1339
+            },
+            "people_present": {
+              "MAE": 0.1725,
+              "R2": 0.9863,
+              "skill_vs_persistence": 0.1163
+            }
+          }
+        },
+        {
+          "seed": 44,
+          "best_params": {
+            "hidden": 64,
+            "lr": 0.003,
+            "epochs": 7,
+            "sequence": "last 60 min (12 steps)",
+            "outputs": "CO2, temperature, alert (shared network)"
+          },
+          "scores": {
+            "all_teaching_hours": {
+              "MAE": 0.1811,
+              "R2": 0.9872,
+              "skill_vs_persistence": -0.5785
+            },
+            "people_present": {
+              "MAE": 0.2239,
+              "R2": 0.9772,
+              "skill_vs_persistence": -0.1474
+            }
+          }
+        }
+      ]
+    },
+    "svr_10k_sample": {
+      "best_params": {
+        "C": 1,
+        "epsilon": 0.1
+      },
+      "configs_tried": 6,
+      "training_rows": 10000,
+      "validation_MAE_best": 0.1183,
+      "fit_seconds": 3.5,
+      "predict_seconds": 249.8,
+      "scores": {
+        "all_teaching_hours": {
+          "MAE": 0.0799,
+          "R2": 0.9975,
+          "skill_vs_persistence": 0.3034
+        },
+        "people_present": {
+          "MAE": 0.1419,
+          "R2": 0.9895,
+          "skill_vs_persistence": 0.2728
+        }
+      }
+    },
+    "tcn": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "scores": {
+        "all_teaching_hours": {
+          "MAE": 0.0789,
+          "R2": 0.9976,
+          "skill_vs_persistence": 0.3127
+        },
+        "people_present": {
+          "MAE": 0.1446,
+          "R2": 0.9897,
+          "skill_vs_persistence": 0.2591
+        }
+      },
+      "scores_std": {
+        "all_teaching_hours": {
+          "MAE": 0.0034,
+          "R2": 0.0001,
+          "skill_vs_persistence": 0.0294
+        },
+        "people_present": {
+          "MAE": 0.0026,
+          "R2": 0.0002,
+          "skill_vs_persistence": 0.0133
+        }
+      },
+      "fit_seconds": 128.6,
+      "per_seed": [
+        {
+          "seed": 42,
+          "best_params": {
+            "hidden": 64,
+            "lr": 0.003,
+            "epochs": 5,
+            "sequence": "last 60 min (12 steps)",
+            "outputs": "CO2, temperature, alert (shared network)"
+          },
+          "scores": {
+            "all_teaching_hours": {
+              "MAE": 0.083,
+              "R2": 0.9974,
+              "skill_vs_persistence": 0.2768
+            },
+            "people_present": {
+              "MAE": 0.1477,
+              "R2": 0.9894,
+              "skill_vs_persistence": 0.2429
+            }
+          }
+        },
+        {
+          "seed": 43,
+          "best_params": {
+            "hidden": 32,
+            "lr": 0.001,
+            "epochs": 8,
+            "sequence": "last 60 min (12 steps)",
+            "outputs": "CO2, temperature, alert (shared network)"
+          },
+          "scores": {
+            "all_teaching_hours": {
+              "MAE": 0.0747,
+              "R2": 0.9977,
+              "skill_vs_persistence": 0.3487
+            },
+            "people_present": {
+              "MAE": 0.1414,
+              "R2": 0.99,
+              "skill_vs_persistence": 0.2755
+            }
+          }
+        },
+        {
+          "seed": 44,
+          "best_params": {
+            "hidden": 64,
+            "lr": 0.001,
+            "epochs": 9,
+            "sequence": "last 60 min (12 steps)",
+            "outputs": "CO2, temperature, alert (shared network)"
+          },
+          "scores": {
+            "all_teaching_hours": {
+              "MAE": 0.0789,
+              "R2": 0.9976,
+              "skill_vs_persistence": 0.3125
+            },
+            "people_present": {
+              "MAE": 0.1446,
+              "R2": 0.9897,
+              "skill_vs_persistence": 0.2588
+            }
+          }
+        }
+      ]
+    },
+    "transformer": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "scores": {
+        "all_teaching_hours": {
+          "MAE": 0.0871,
+          "R2": 0.9971,
+          "skill_vs_persistence": 0.241
+        },
+        "people_present": {
+          "MAE": 0.1519,
+          "R2": 0.9889,
+          "skill_vs_persistence": 0.2219
+        }
+      },
+      "scores_std": {
+        "all_teaching_hours": {
+          "MAE": 0.0034,
+          "R2": 0.0002,
+          "skill_vs_persistence": 0.0295
+        },
+        "people_present": {
+          "MAE": 0.0064,
+          "R2": 0.0007,
+          "skill_vs_persistence": 0.0326
+        }
+      },
+      "fit_seconds": 824.8,
+      "per_seed": [
+        {
+          "seed": 42,
+          "best_params": {
+            "hidden": 32,
+            "lr": 0.001,
+            "epochs": 10,
+            "sequence": "last 60 min (12 steps)",
+            "outputs": "CO2, temperature, alert (shared network)"
+          },
+          "scores": {
+            "all_teaching_hours": {
+              "MAE": 0.0896,
+              "R2": 0.997,
+              "skill_vs_persistence": 0.219
+            },
+            "people_present": {
+              "MAE": 0.1602,
+              "R2": 0.988,
+              "skill_vs_persistence": 0.1793
+            }
+          }
+        },
+        {
+          "seed": 43,
+          "best_params": {
+            "hidden": 32,
+            "lr": 0.003,
+            "epochs": 6,
+            "sequence": "last 60 min (12 steps)",
+            "outputs": "CO2, temperature, alert (shared network)"
+          },
+          "scores": {
+            "all_teaching_hours": {
+              "MAE": 0.0893,
+              "R2": 0.9969,
+              "skill_vs_persistence": 0.2214
+            },
+            "people_present": {
+              "MAE": 0.1507,
+              "R2": 0.9891,
+              "skill_vs_persistence": 0.2279
+            }
+          }
+        },
+        {
+          "seed": 44,
+          "best_params": {
+            "hidden": 64,
+            "lr": 0.003,
+            "epochs": 5,
+            "sequence": "last 60 min (12 steps)",
+            "outputs": "CO2, temperature, alert (shared network)"
+          },
+          "scores": {
+            "all_teaching_hours": {
+              "MAE": 0.0823,
+              "R2": 0.9974,
+              "skill_vs_persistence": 0.2827
+            },
+            "people_present": {
+              "MAE": 0.1447,
+              "R2": 0.9897,
+              "skill_vs_persistence": 0.2586
+            }
+          }
+        }
+      ]
+    }
+  },
+  "alert30": {
+    "rule_current_co2_above_1000": {
+      "scores": {
+        "all_teaching_hours": {
+          "precision": 0.9436,
+          "recall": 0.7141,
+          "F1": 0.813,
+          "PR_AUC": 0.892
+        },
+        "early_warning_rows_co2_now_le_1000": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "F1": 0.0,
+          "PR_AUC": 0.3511
+        }
+      }
+    },
+    "rule_linear_trend_extrapolation": {
+      "scores": {
+        "all_teaching_hours": {
+          "precision": 0.7469,
+          "recall": 0.791,
+          "F1": 0.7683,
+          "PR_AUC": 0.8192
+        },
+        "early_warning_rows_co2_now_le_1000": {
+          "precision": 0.4196,
+          "recall": 0.6484,
+          "F1": 0.5095,
+          "PR_AUC": 0.4744
+        }
+      }
+    },
+    "logistic_regression": {
+      "best_params": {
+        "C": 0.01
+      },
+      "threshold": 0.9707,
+      "configs_tried": 4,
+      "validation_F1_best": 0.8581,
+      "fit_seconds": 4.1,
+      "predict_seconds": 0.52,
+      "scores": {
+        "all_teaching_hours": {
+          "precision": 0.8743,
+          "recall": 0.7607,
+          "F1": 0.8136,
+          "PR_AUC": 0.9048
+        },
+        "early_warning_rows_co2_now_le_1000": {
+          "precision": 0.549,
+          "recall": 0.3529,
+          "F1": 0.4297,
+          "PR_AUC": 0.4617
+        }
+      }
+    },
+    "random_forest_classifier": {
+      "best_params": {
+        "max_depth": null,
+        "min_samples_leaf": 10
+      },
+      "threshold": 0.723,
+      "configs_tried": 3,
+      "validation_F1_best": 0.8864,
+      "fit_seconds": 24.7,
+      "predict_seconds": 1.17,
+      "scores": {
+        "all_teaching_hours": {
+          "precision": 0.885,
+          "recall": 0.8607,
+          "F1": 0.8727,
+          "PR_AUC": 0.9418
+        },
+        "early_warning_rows_co2_now_le_1000": {
+          "precision": 0.6769,
+          "recall": 0.5131,
+          "F1": 0.5838,
+          "PR_AUC": 0.63
+        }
+      }
+    },
+    "hist_gradient_boosting_classifier": {
+      "best_params": {
+        "min_samples_leaf": 20,
+        "max_leaf_nodes": 15,
+        "max_iter": 200,
+        "learning_rate": 0.03,
+        "l2_regularization": 1.0
+      },
+      "threshold": 0.3932,
+      "configs_tried": 10,
+      "validation_F1_best": 0.8862,
+      "fit_seconds": 7.4,
+      "predict_seconds": 1.41,
+      "scores": {
+        "all_teaching_hours": {
+          "precision": 0.8682,
+          "recall": 0.8714,
+          "F1": 0.8698,
+          "PR_AUC": 0.9448
+        },
+        "early_warning_rows_co2_now_le_1000": {
+          "precision": 0.6257,
+          "recall": 0.5571,
+          "F1": 0.5894,
+          "PR_AUC": 0.6317
+        }
+      }
+    },
+    "sarimax": {
+      "threshold_ppm": 1000,
+      "scores": {
+        "all_teaching_hours": {
+          "precision": 0.9496,
+          "recall": 0.7644,
+          "F1": 0.847,
+          "PR_AUC": 0.9143
+        },
+        "early_warning_rows_co2_now_le_1000": {
+          "precision": 0.8118,
+          "recall": 0.2081,
+          "F1": 0.3313,
+          "PR_AUC": 0.495
+        }
+      }
+    },
+    "lstm": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "scores": {
+        "all_teaching_hours": {
+          "precision": 0.8285,
+          "recall": 0.8236,
+          "F1": 0.8257,
+          "PR_AUC": 0.9103
+        },
+        "early_warning_rows_co2_now_le_1000": {
+          "precision": 0.4969,
+          "recall": 0.4676,
+          "F1": 0.4805,
+          "PR_AUC": 0.4933
+        }
+      },
+      "scores_std": {
+        "all_teaching_hours": {
+          "precision": 0.0175,
+          "recall": 0.0176,
+          "F1": 0.0002,
+          "PR_AUC": 0.0005
+        },
+        "early_warning_rows_co2_now_le_1000": {
+          "precision": 0.0287,
+          "recall": 0.0236,
+          "F1": 0.0037,
+          "PR_AUC": 0.0107
+        }
+      },
+      "fit_seconds": 90.3,
+      "per_seed": [
+        {
+          "seed": 42,
+          "best_params": {
+            "hidden": 64,
+            "lr": 0.003,
+            "epochs": 4,
+            "sequence": "last 60 min (12 steps)",
+            "outputs": "CO2, temperature, alert (shared network)"
+          },
+          "scores": {
+            "all_teaching_hours": {
+              "precision": 0.8071,
+              "recall": 0.8453,
+              "F1": 0.8258,
+              "PR_AUC": 0.9107
+            },
+            "early_warning_rows_co2_now_le_1000": {
+              "precision": 0.4649,
+              "recall": 0.4993,
+              "F1": 0.4815,
+              "PR_AUC": 0.4803
+            }
+          }
+        },
+        {
+          "seed": 43,
+          "best_params": {
+            "hidden": 64,
+            "lr": 0.003,
+            "epochs": 7,
+            "sequence": "last 60 min (12 steps)",
+            "outputs": "CO2, temperature, alert (shared network)"
+          },
+          "scores": {
+            "all_teaching_hours": {
+              "precision": 0.8499,
+              "recall": 0.8023,
+              "F1": 0.8254,
+              "PR_AUC": 0.9096
+            },
+            "early_warning_rows_co2_now_le_1000": {
+              "precision": 0.5345,
+              "recall": 0.4429,
+              "F1": 0.4844,
+              "PR_AUC": 0.5066
+            }
+          }
+        },
+        {
+          "seed": 44,
+          "best_params": {
+            "hidden": 64,
+            "lr": 0.003,
+            "epochs": 7,
+            "sequence": "last 60 min (12 steps)",
+            "outputs": "CO2, temperature, alert (shared network)"
+          },
+          "scores": {
+            "all_teaching_hours": {
+              "precision": 0.8286,
+              "recall": 0.8233,
+              "F1": 0.8259,
+              "PR_AUC": 0.9105
+            },
+            "early_warning_rows_co2_now_le_1000": {
+              "precision": 0.4914,
+              "recall": 0.4606,
+              "F1": 0.4755,
+              "PR_AUC": 0.493
+            }
+          }
+        }
+      ]
+    },
+    "tcn": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "scores": {
+        "all_teaching_hours": {
+          "precision": 0.8429,
+          "recall": 0.8005,
+          "F1": 0.8196,
+          "PR_AUC": 0.9057
+        },
+        "early_warning_rows_co2_now_le_1000": {
+          "precision": 0.5266,
+          "recall": 0.4475,
+          "F1": 0.4749,
+          "PR_AUC": 0.5
+        }
+      },
+      "scores_std": {
+        "all_teaching_hours": {
+          "precision": 0.036,
+          "recall": 0.0378,
+          "F1": 0.0122,
+          "PR_AUC": 0.0084
+        },
+        "early_warning_rows_co2_now_le_1000": {
+          "precision": 0.0535,
+          "recall": 0.0773,
+          "F1": 0.0316,
+          "PR_AUC": 0.0191
+        }
+      },
+      "fit_seconds": 128.6,
+      "per_seed": [
+        {
+          "seed": 42,
+          "best_params": {
+            "hidden": 64,
+            "lr": 0.003,
+            "epochs": 5,
+            "sequence": "last 60 min (12 steps)",
+            "outputs": "CO2, temperature, alert (shared network)"
+          },
+          "scores": {
+            "all_teaching_hours": {
+              "precision": 0.8442,
+              "recall": 0.8296,
+              "F1": 0.8369,
+              "PR_AUC": 0.9166
+            },
+            "early_warning_rows_co2_now_le_1000": {
+              "precision": 0.5344,
+              "recall": 0.48,
+              "F1": 0.5057,
+              "PR_AUC": 0.527
+            }
+          }
+        },
+        {
+          "seed": 43,
+          "best_params": {
+            "hidden": 32,
+            "lr": 0.001,
+            "epochs": 8,
+            "sequence": "last 60 min (12 steps)",
+            "outputs": "CO2, temperature, alert (shared network)"
+          },
+          "scores": {
+            "all_teaching_hours": {
+              "precision": 0.7981,
+              "recall": 0.8247,
+              "F1": 0.8112,
+              "PR_AUC": 0.8961
+            },
+            "early_warning_rows_co2_now_le_1000": {
+              "precision": 0.4575,
+              "recall": 0.5217,
+              "F1": 0.4875,
+              "PR_AUC": 0.4874
+            }
+          }
+        },
+        {
+          "seed": 44,
+          "best_params": {
+            "hidden": 64,
+            "lr": 0.001,
+            "epochs": 9,
+            "sequence": "last 60 min (12 steps)",
+            "outputs": "CO2, temperature, alert (shared network)"
+          },
+          "scores": {
+            "all_teaching_hours": {
+              "precision": 0.8863,
+              "recall": 0.7471,
+              "F1": 0.8108,
+              "PR_AUC": 0.9044
+            },
+            "early_warning_rows_co2_now_le_1000": {
+              "precision": 0.5878,
+              "recall": 0.3408,
+              "F1": 0.4314,
+              "PR_AUC": 0.4855
+            }
+          }
+        }
+      ]
+    },
+    "transformer": {
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "scores": {
+        "all_teaching_hours": {
+          "precision": 0.8682,
+          "recall": 0.7615,
+          "F1": 0.8088,
+          "PR_AUC": 0.9032
+        },
+        "early_warning_rows_co2_now_le_1000": {
+          "precision": 0.5516,
+          "recall": 0.3789,
+          "F1": 0.4356,
+          "PR_AUC": 0.4812
+        }
+      },
+      "scores_std": {
+        "all_teaching_hours": {
+          "precision": 0.039,
+          "recall": 0.0533,
+          "F1": 0.0178,
+          "PR_AUC": 0.0084
+        },
+        "early_warning_rows_co2_now_le_1000": {
+          "precision": 0.0466,
+          "recall": 0.1053,
+          "F1": 0.0525,
+          "PR_AUC": 0.028
+        }
+      },
+      "fit_seconds": 824.8,
+      "per_seed": [
+        {
+          "seed": 42,
+          "best_params": {
+            "hidden": 32,
+            "lr": 0.001,
+            "epochs": 10,
+            "sequence": "last 60 min (12 steps)",
+            "outputs": "CO2, temperature, alert (shared network)"
+          },
+          "scores": {
+            "all_teaching_hours": {
+              "precision": 0.8132,
+              "recall": 0.8252,
+              "F1": 0.8192,
+              "PR_AUC": 0.9066
+            },
+            "early_warning_rows_co2_now_le_1000": {
+              "precision": 0.4862,
+              "recall": 0.525,
+              "F1": 0.5048,
+              "PR_AUC": 0.5124
+            }
+          }
+        },
+        {
+          "seed": 43,
+          "best_params": {
+            "hidden": 32,
+            "lr": 0.003,
+            "epochs": 6,
+            "sequence": "last 60 min (12 steps)",
+            "outputs": "CO2, temperature, alert (shared network)"
+          },
+          "scores": {
+            "all_teaching_hours": {
+              "precision": 0.8992,
+              "recall": 0.6947,
+              "F1": 0.7838,
+              "PR_AUC": 0.8916
+            },
+            "early_warning_rows_co2_now_le_1000": {
+              "precision": 0.5777,
+              "recall": 0.2807,
+              "F1": 0.3778,
+              "PR_AUC": 0.4444
+            }
+          }
+        },
+        {
+          "seed": 44,
+          "best_params": {
+            "hidden": 64,
+            "lr": 0.003,
+            "epochs": 5,
+            "sequence": "last 60 min (12 steps)",
+            "outputs": "CO2, temperature, alert (shared network)"
+          },
+          "scores": {
+            "all_teaching_hours": {
+              "precision": 0.8923,
+              "recall": 0.7645,
+              "F1": 0.8235,
+              "PR_AUC": 0.9113
+            },
+            "early_warning_rows_co2_now_le_1000": {
+              "precision": 0.5909,
+              "recall": 0.3309,
+              "F1": 0.4242,
+              "PR_AUC": 0.4868
+            }
+          }
+        }
+      ]
+    }
+  },
+  "setup": {
+    "fit_period": "18 Jan - 24 Apr 2022",
+    "validation_period": "25 Apr - 15 May 2022",
+    "test_period": "17 May - 24 Sep 2022",
+    "rows": {
+      "fit": 311159,
+      "val": 74117,
+      "test": 464722,
+      "train": 385276
+    },
+    "note_true_sarima": "A seasonal SARIMA with a daily season (96 steps at 15-min resolution) did not finish fitting one sensor within 15 minutes, so the daily cycle is modelled with Fourier terms instead.",
+    "runtime_minutes": 275.0
+  }
+}

@@ -1,0 +1,13 @@
+# Raw data (not public; belongs to the university that collected it)
+Data/
+# Working files rebuilt by the code (cleaned data, trained models, predictions)
+outputs/
+# Python environments and caches
+tncenv/
+.venv/
+venv/
+__pycache__/
+*.pyc
+# Old first version kept outside the repository
+Scripts/
+*.ipynb_checkpoints

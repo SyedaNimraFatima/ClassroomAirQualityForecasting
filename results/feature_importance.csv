@@ -1,0 +1,115 @@
+model,feature,importance,std,meaning
+hist_gradient_boosting_regressor_co2_30,co2,1.44806,0.01949,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_co2_30,tmp,0.31299,0.0322,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_co2_30,rlf,0.00114,0.00413,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_co2_30,lux,-0.00962,0.00142,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_co2_30,pir,0.94466,0.02125,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_co2_30,volume_m3,0.10624,0.0056,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_co2_30,hour_sin,0.75633,0.04205,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_co2_30,hour_cos,0.06104,0.02145,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_co2_30,dow,-0.02392,0.00948,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_co2_30,weekend,0.0,0.0,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_co2_30,co2_lag5,2.39667,0.01128,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_co2_30,co2_lag10,0.34752,0.01099,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_co2_30,co2_lag15,0.07516,0.00528,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_co2_30,co2_lag30,0.293,0.00491,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_co2_30,co2_lag60,0.11126,0.00511,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_co2_30,co2_d5,2.52395,0.02746,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_co2_30,co2_d15,1.30232,0.01933,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_co2_30,co2_d30,0.1845,0.00252,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_co2_30,co2_max60,0.09865,0.01207,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_co2_30,tmp_lag5,0.0649,0.02117,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_co2_30,tmp_lag10,0.00991,0.02246,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_co2_30,tmp_lag15,0.02019,0.00628,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_co2_30,tmp_lag30,0.00409,0.0048,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_co2_30,tmp_lag60,0.19556,0.0122,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_co2_30,tmp_d5,-0.00107,0.00233,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_co2_30,tmp_d15,0.04613,0.00954,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_co2_30,tmp_d30,0.0085,0.00589,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_co2_30,tmp_mean24h,0.02426,0.00992,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_co2_30,pir_sum30,0.13691,0.01037,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_co2_30,pir_sum60,0.08043,0.00756,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_co2_30,lux_mean30,0.02109,0.00335,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_co2_30,rlf_d30,0.02204,0.00284,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_co2_30,co2_excess_per_m3,0.20118,0.00089,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_co2_30,co2_wk,0.05156,0.01134,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_co2_30,co2_wk_d30,0.58688,0.01061,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_co2_30,co2_wk_d60,0.07236,0.00619,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_co2_30,pir_wk_next60,-0.01047,0.00447,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_co2_30,tmp_wk_d60,-0.02049,0.00416,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_tmp_30,co2,-0.0,0.0,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_tmp_30,tmp,-2e-05,1e-05,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_tmp_30,rlf,-0.00011,0.0,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_tmp_30,lux,0.00868,5e-05,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_tmp_30,pir,0.00033,1e-05,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_tmp_30,volume_m3,-3e-05,1e-05,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_tmp_30,hour_sin,0.00745,8e-05,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_tmp_30,hour_cos,-0.00022,3e-05,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_tmp_30,dow,-1e-05,1e-05,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_tmp_30,weekend,0.0,0.0,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_tmp_30,co2_lag5,0.00057,3e-05,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_tmp_30,co2_lag10,0.0001,2e-05,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_tmp_30,co2_lag15,-8e-05,0.0,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_tmp_30,co2_lag30,-0.00014,2e-05,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_tmp_30,co2_lag60,-4e-05,1e-05,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_tmp_30,co2_d5,0.00205,4e-05,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_tmp_30,co2_d15,-3e-05,0.0,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_tmp_30,co2_d30,-1e-05,0.0,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_tmp_30,co2_max60,0.0,0.0,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_tmp_30,tmp_lag5,0.00043,3e-05,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_tmp_30,tmp_lag10,-0.0003,2e-05,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_tmp_30,tmp_lag15,-7e-05,1e-05,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_tmp_30,tmp_lag30,-0.00022,5e-05,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_tmp_30,tmp_lag60,0.00044,3e-05,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_tmp_30,tmp_d5,0.00188,7e-05,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_tmp_30,tmp_d15,0.02316,0.00028,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_tmp_30,tmp_d30,0.00215,5e-05,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_tmp_30,tmp_mean24h,0.00279,2e-05,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_tmp_30,pir_sum30,5e-05,1e-05,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_tmp_30,pir_sum60,2e-05,1e-05,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_tmp_30,lux_mean30,0.00479,0.0001,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_tmp_30,rlf_d30,-4e-05,0.0,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_tmp_30,co2_excess_per_m3,-1e-05,0.0,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_tmp_30,co2_wk,-1e-05,0.0,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_tmp_30,co2_wk_d30,3e-05,1e-05,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_tmp_30,co2_wk_d60,0.0,0.0,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_tmp_30,pir_wk_next60,0.0,0.0,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_regressor_tmp_30,tmp_wk_d60,0.00061,5e-05,increase in MAE when this feature is shuffled (ppm or C)
+hist_gradient_boosting_classifier_alert30,co2,0.59432,0.00521,drop in PR-AUC when this feature is shuffled
+hist_gradient_boosting_classifier_alert30,tmp,0.00016,5e-05,drop in PR-AUC when this feature is shuffled
+hist_gradient_boosting_classifier_alert30,rlf,4e-05,3e-05,drop in PR-AUC when this feature is shuffled
+hist_gradient_boosting_classifier_alert30,lux,0.00032,0.00045,drop in PR-AUC when this feature is shuffled
+hist_gradient_boosting_classifier_alert30,pir,0.00503,0.00043,drop in PR-AUC when this feature is shuffled
+hist_gradient_boosting_classifier_alert30,volume_m3,0.00147,0.00057,drop in PR-AUC when this feature is shuffled
+hist_gradient_boosting_classifier_alert30,hour_sin,0.01125,0.00134,drop in PR-AUC when this feature is shuffled
+hist_gradient_boosting_classifier_alert30,hour_cos,0.00013,7e-05,drop in PR-AUC when this feature is shuffled
+hist_gradient_boosting_classifier_alert30,dow,0.00015,4e-05,drop in PR-AUC when this feature is shuffled
+hist_gradient_boosting_classifier_alert30,weekend,0.0,0.0,drop in PR-AUC when this feature is shuffled
+hist_gradient_boosting_classifier_alert30,co2_lag5,0.00034,0.00014,drop in PR-AUC when this feature is shuffled
+hist_gradient_boosting_classifier_alert30,co2_lag10,0.0001,6e-05,drop in PR-AUC when this feature is shuffled
+hist_gradient_boosting_classifier_alert30,co2_lag15,0.00029,7e-05,drop in PR-AUC when this feature is shuffled
+hist_gradient_boosting_classifier_alert30,co2_lag30,6e-05,1e-05,drop in PR-AUC when this feature is shuffled
+hist_gradient_boosting_classifier_alert30,co2_lag60,-2e-05,5e-05,drop in PR-AUC when this feature is shuffled
+hist_gradient_boosting_classifier_alert30,co2_d5,0.01937,0.00034,drop in PR-AUC when this feature is shuffled
+hist_gradient_boosting_classifier_alert30,co2_d15,0.00303,0.00032,drop in PR-AUC when this feature is shuffled
+hist_gradient_boosting_classifier_alert30,co2_d30,0.00068,0.00027,drop in PR-AUC when this feature is shuffled
+hist_gradient_boosting_classifier_alert30,co2_max60,0.01287,0.00094,drop in PR-AUC when this feature is shuffled
+hist_gradient_boosting_classifier_alert30,tmp_lag5,0.00027,0.00011,drop in PR-AUC when this feature is shuffled
+hist_gradient_boosting_classifier_alert30,tmp_lag10,8e-05,0.00014,drop in PR-AUC when this feature is shuffled
+hist_gradient_boosting_classifier_alert30,tmp_lag15,0.0001,3e-05,drop in PR-AUC when this feature is shuffled
+hist_gradient_boosting_classifier_alert30,tmp_lag30,0.00022,2e-05,drop in PR-AUC when this feature is shuffled
+hist_gradient_boosting_classifier_alert30,tmp_lag60,-5e-05,4e-05,drop in PR-AUC when this feature is shuffled
+hist_gradient_boosting_classifier_alert30,tmp_d5,2e-05,3e-05,drop in PR-AUC when this feature is shuffled
+hist_gradient_boosting_classifier_alert30,tmp_d15,0.00021,5e-05,drop in PR-AUC when this feature is shuffled
+hist_gradient_boosting_classifier_alert30,tmp_d30,0.0,1e-05,drop in PR-AUC when this feature is shuffled
+hist_gradient_boosting_classifier_alert30,tmp_mean24h,0.00069,0.00017,drop in PR-AUC when this feature is shuffled
+hist_gradient_boosting_classifier_alert30,pir_sum30,0.00019,2e-05,drop in PR-AUC when this feature is shuffled
+hist_gradient_boosting_classifier_alert30,pir_sum60,-9e-05,0.00018,drop in PR-AUC when this feature is shuffled
+hist_gradient_boosting_classifier_alert30,lux_mean30,3e-05,0.00012,drop in PR-AUC when this feature is shuffled
+hist_gradient_boosting_classifier_alert30,rlf_d30,0.00012,5e-05,drop in PR-AUC when this feature is shuffled
+hist_gradient_boosting_classifier_alert30,co2_excess_per_m3,0.06792,0.0051,drop in PR-AUC when this feature is shuffled
+hist_gradient_boosting_classifier_alert30,co2_wk,0.00015,5e-05,drop in PR-AUC when this feature is shuffled
+hist_gradient_boosting_classifier_alert30,co2_wk_d30,0.00116,0.00033,drop in PR-AUC when this feature is shuffled
+hist_gradient_boosting_classifier_alert30,co2_wk_d60,0.00018,7e-05,drop in PR-AUC when this feature is shuffled
+hist_gradient_boosting_classifier_alert30,pir_wk_next60,6e-05,1e-05,drop in PR-AUC when this feature is shuffled
+hist_gradient_boosting_classifier_alert30,tmp_wk_d60,0.0001,0.00012,drop in PR-AUC when this feature is shuffled

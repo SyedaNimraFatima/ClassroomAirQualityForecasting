@@ -1,0 +1,125 @@
+{
+  "ridge_regression_co2_30": {
+    "alpha": 100
+  },
+  "random_forest_regressor_co2_30": {
+    "max_depth": 20,
+    "min_samples_leaf": 20
+  },
+  "hist_gradient_boosting_regressor_co2_30": {
+    "min_samples_leaf": 20,
+    "max_leaf_nodes": 31,
+    "max_iter": 200,
+    "learning_rate": 0.03,
+    "l2_regularization": 5.0
+  },
+  "ridge_regression_tmp_30": {
+    "alpha": 100
+  },
+  "random_forest_regressor_tmp_30": {
+    "max_depth": null,
+    "min_samples_leaf": 10
+  },
+  "hist_gradient_boosting_regressor_tmp_30": {
+    "min_samples_leaf": 20,
+    "max_leaf_nodes": 15,
+    "max_iter": 200,
+    "learning_rate": 0.03,
+    "l2_regularization": 1.0
+  },
+  "logistic_regression_alert30": {
+    "C": 0.01,
+    "threshold": 0.9706568997330705
+  },
+  "random_forest_classifier_alert30": {
+    "max_depth": null,
+    "min_samples_leaf": 10,
+    "threshold": 0.7229772574110224
+  },
+  "hist_gradient_boosting_classifier_alert30": {
+    "min_samples_leaf": 20,
+    "max_leaf_nodes": 15,
+    "max_iter": 200,
+    "learning_rate": 0.03,
+    "l2_regularization": 1.0,
+    "threshold": 0.39322622301038
+  },
+  "sarimax_co2_order": [
+    1,
+    1,
+    1
+  ],
+  "sarimax_tmp_order": [
+    2,
+    1,
+    1
+  ],
+  "lstm": [
+    {
+      "hidden": 64,
+      "lr": 0.003,
+      "epochs": 4,
+      "alert_threshold": 0.9025012977684237
+    },
+    {
+      "hidden": 64,
+      "lr": 0.003,
+      "epochs": 7,
+      "alert_threshold": 0.9286069317424999
+    },
+    {
+      "hidden": 64,
+      "lr": 0.003,
+      "epochs": 7,
+      "alert_threshold": 0.906796705863055
+    }
+  ],
+  "svr_co2_30": {
+    "C": 1,
+    "epsilon": 0.1
+  },
+  "svr_tmp_30": {
+    "C": 1,
+    "epsilon": 0.1
+  },
+  "tcn": [
+    {
+      "hidden": 64,
+      "lr": 0.003,
+      "epochs": 5,
+      "alert_threshold": 0.9388712286949158
+    },
+    {
+      "hidden": 32,
+      "lr": 0.001,
+      "epochs": 8,
+      "alert_threshold": 0.9313293258582843
+    },
+    {
+      "hidden": 64,
+      "lr": 0.001,
+      "epochs": 9,
+      "alert_threshold": 0.9436536187284129
+    }
+  ],
+  "transformer": [
+    {
+      "hidden": 32,
+      "lr": 0.001,
+      "epochs": 10,
+      "alert_threshold": 0.9109821915626526
+    },
+    {
+      "hidden": 32,
+      "lr": 0.003,
+      "epochs": 6,
+      "alert_threshold": 0.8874620901135836
+    },
+    {
+      "hidden": 64,
+      "lr": 0.003,
+      "epochs": 5,
+      "alert_threshold": 0.9582966524011948
+    }
+  ]
+}
