@@ -254,7 +254,7 @@ flowchart LR
 - The models predict the **change** from the current value. This lets a model trained in spring still work in a hot summer, because tree models can't predict values outside their training range.
 - Only teaching hours (Mon–Fri 07:30–20:00) are used for training and scoring.
 
-### 6.3 The models, in plain language
+### 6.3 The models
 
 | Model | How it works | Strengths | Weaknesses (here) |
 |---|---|---|---|
@@ -270,7 +270,7 @@ flowchart LR
 | **TCN** (temporal convolutional network) | Slides filters over the time sequence. "Causal" means it only looks backwards; "dilated" means each layer looks further back | Faster than an LSTM; sees a fixed window | Same instability as the LSTM |
 | **Transformer** | Uses self-attention: every time step looks at every other one and learns which moments matter most | Flexible and powerful on large sequence data | Slowest to train here (about 14 minutes per setting) and no gain on this data |
 
-### 6.4 The measures, in plain language
+### 6.4 The measures
 
 | Measure | Meaning | Why used here |
 |---|---|---|
@@ -297,7 +297,7 @@ flowchart LR
 ---
 
 
-## 7. The Methods, Explained in My Own Words
+## 7. The Methods
 
 ### Why the original scores were spurious: leakage in time-series data
 Sensor readings taken a minute apart are almost identical. A random 80/20 split scatters these near-duplicates across the training and test sets, so the model is effectively tested on data it has already seen. This is **data leakage**, and it makes the scores look far better than the model really is. The fix is to respect time: train on earlier months and test on later ones, as the model would be used in practice. I also measured how much leakage inflates the score. For the chosen CO2 model, a random split suggests a 20% improvement over the baseline, while the honest time split gives 8% (section 2).
