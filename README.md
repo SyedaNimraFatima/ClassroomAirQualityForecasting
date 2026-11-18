@@ -643,6 +643,6 @@ The sensor data belongs to the university that collected it. It isn't included i
 
 ## 15. Contact
 
-Syeda Nimra Fatima
+Nimra Fatima
 inimrasyed@gmail.com
 GitHub: [SyedaNimraFatima](https://github.com/SyedaNimraFatima)
