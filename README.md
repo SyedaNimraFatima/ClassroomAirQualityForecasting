@@ -14,7 +14,7 @@ Nine models, from simple baselines to deep neural networks, were compared under 
 4. [Data](#4-data)
 5. [What the Data Shows](#5-what-the-data-shows)
 6. [Method](#6-method)
-7. [The Methods, Explained in My Own Words](#7-the-methods-explained-in-my-own-words)
+7. [The Methods](#7-the-methods)
 8. [Results](#8-results)
 9. [Room Recommendations](#9-room-recommendations)
 10. [Limitations and Future Work](#10-limitations-and-future-work)
@@ -635,7 +635,7 @@ LICENSE                       copyright notice
 
 ## 14. License
 
-© 2026 Syeda Nimra Fatima. **All rights reserved.**
+© 2026 Nimra Fatima. **All rights reserved.**
 
 This code is shared for viewing and evaluation only. It may not be copied, modified, distributed or used, in whole or in part, without my prior written permission. To request permission, email inimrasyed@gmail.com. Full terms are in [LICENSE](LICENSE).
 
