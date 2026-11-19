@@ -1,7 +1,4 @@
 """
-Use the trained models for one room at one moment, the way a building dashboard would.
-
-Example:
     python pipeline/predict_room.py --room "Room 01" --time "2022-06-20 10:30"
 """
 import argparse
